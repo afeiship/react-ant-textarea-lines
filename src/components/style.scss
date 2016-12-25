@@ -1,0 +1,8 @@
+.react-progress{
+  height: 5px;
+  background: #ebebeb;
+  >.bd{
+    height: 100%;
+    transition: width 0.2s;
+  }
+}
