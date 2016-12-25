@@ -11,10 +11,12 @@
 ## props:
 | name | type | value | description |
 | :----| :----| :----| :----|
-| visible  | Boolean | true/false | v-show |
+| cssClass  | String | '' | customize your css class |
+| color  | String | '#09bb07' | Progress bar background color |
+| width  | String | '0%' | Progress bar width rate |
 
 
 ## usage:
 ```html
-<react-progress :visible="true" />
+<ReactProgress width="50%" color="#09bb07" />
 ```
