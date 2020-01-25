@@ -1,2 +1,2 @@
-import ReactProgress from 'components/react-progress';
+import ReactProgress from './components';
 export default ReactProgress;
