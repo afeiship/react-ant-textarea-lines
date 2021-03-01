@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
 
 const CLASS_NAME = 'react-progress';
 
-export default class extends Component {
+export default class ReactProgress extends Component {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * The highlight body color.
+     */
     color: PropTypes.string,
+    /**
+     * The progress value.
+     */
     value: PropTypes.number,
+    /**
+     * The max limit value.
+     */
     max: PropTypes.number
   };
 
   static defaultProps = {
     color: '#419bf9',
-    value:0,
+    value: 0,
     max: 100
   };
 
@@ -36,7 +45,7 @@ export default class extends Component {
         className={classNames(CLASS_NAME, className)}
         {...props}>
         <div
-          className="is-inner"
+          className={`${CLASS_NAME}__body`}
           style={{
             backgroundColor: color,
             width: this.width

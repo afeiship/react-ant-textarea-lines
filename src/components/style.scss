@@ -6,7 +6,7 @@ $react-progress-options: () !default;
   border: 1px solid #cfcfcf;
   border-radius: 10px;
   overflow: hidden;
-  .is-inner {
+  &__body {
     height: 100%;
   }
 }
