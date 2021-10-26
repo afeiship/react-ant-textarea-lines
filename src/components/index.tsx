@@ -32,6 +32,13 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
     value: this.props.value?.join('\n')
   }
 
+  shouldComponentUpdate(inProps) {
+    const { value } = inProps
+    if (value !== this.state.value) {
+      this.setState({ value })
+    }
+    return true;
+  }
 
   handleChange = (inEvent) => {
     const { value } = inEvent.target;
