@@ -34,8 +34,9 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
 
   shouldComponentUpdate(inProps) {
     const { value } = inProps
-    if (value !== this.state.value) {
-      this.setState({ value })
+    const _value = value?.join('\n')
+    if (_value !== this.state.value) {
+      this.setState({ value: _value })
     }
     return true;
   }
