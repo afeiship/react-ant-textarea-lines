@@ -1,5 +1,5 @@
-# react-progress
-> Progress for react.
+# react-ant-textarea-lines
+> Get lines with textarea for antd.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -8,43 +8,39 @@
 
 ## installation
 ```shell
-npm install -S @jswork/react-progress
+npm install -S @jswork/react-ant-textarea-lines
 ```
-
-## properties
-__GENERATE_DOCS__
 
 ## usage
 1. import css
   ```scss
-  @import "~@jswork/react-progress/dist/style.css";
+  @import "~@jswork/react-ant-textarea-lines/dist/style.css";
 
   // or use sass
-  @import "~@jswork/react-progress/dist/style.scss";
+  @import "~@jswork/react-ant-textarea-lines/dist/style.scss";
 
   // customize your styles:
-  $react-progress-options: ()
+  $react-ant-textarea-lines-options: ()
   ```
 2. import js
   ```js
 __GENERATE_DAPP__
   ```
 
-## documentation
-- https://afeiship.github.io/react-progress/
-
+## preview
+- https://afeiship.github.io/react-ant-textarea-lines/
 
 ## license
-Code released under [the MIT license](https://github.com/afeiship/react-progress/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/react-ant-textarea-lines/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/react-progress
-[version-url]: https://npmjs.org/package/@jswork/react-progress
+[version-image]: https://img.shields.io/npm/v/@jswork/react-ant-textarea-lines
+[version-url]: https://npmjs.org/package/@jswork/react-ant-textarea-lines
 
-[license-image]: https://img.shields.io/npm/l/@jswork/react-progress
-[license-url]: https://github.com/afeiship/react-progress/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/react-ant-textarea-lines
+[license-url]: https://github.com/afeiship/react-ant-textarea-lines/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-progress
-[size-url]: https://github.com/afeiship/react-progress/blob/master/dist/react-progress.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-ant-textarea-lines
+[size-url]: https://github.com/afeiship/react-ant-textarea-lines/blob/master/dist/react-ant-textarea-lines.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/react-progress
-[download-url]: https://www.npmjs.com/package/@jswork/react-progress
+[download-image]: https://img.shields.io/npm/dm/@jswork/react-ant-textarea-lines
+[download-url]: https://www.npmjs.com/package/@jswork/react-ant-textarea-lines

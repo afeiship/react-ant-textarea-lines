@@ -1,5 +1,5 @@
-# react-progress
-> Progress for react.
+# react-ant-textarea-lines
+> Get lines with textarea for antd.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -8,88 +8,55 @@
 
 ## installation
 ```shell
-npm install -S @jswork/react-progress
+npm install -S @jswork/react-ant-textarea-lines
 ```
-
-## properties
-| Name      | Type   | Required | Default   | Description                           |
-| --------- | ------ | -------- | --------- | ------------------------------------- |
-| className | string | false    | -         | The extended className for component. |
-| color     | string | false    | '#419bf9' | The highlight body color.             |
-| value     | number | false    | 0         | The progress value.                   |
-| max       | number | false    | 100       | The max limit value.                  |
-
 
 ## usage
 1. import css
   ```scss
-  @import "~@jswork/react-progress/dist/style.css";
+  @import "~@jswork/boilerplate-react-component/dist/style.css";
 
   // or use sass
-  @import "~@jswork/react-progress/dist/style.scss";
+  @import "~@jswork/boilerplate-react-component/dist/style.scss";
 
   // customize your styles:
-  $react-progress-options: ()
+  $boilerplate-react-component-options: ()
   ```
 2. import js
   ```js
-  import ReactDemokit from '@jswork/react-demokit';
   import React from 'react';
-  import ReactDOM from 'react-dom';
-  import ReactProgress from '@jswork/react-progress';
-  import './assets/style.scss';
+  import ReactAntTextareaLines from '@jswork/boilerplate-react-component';
+  import styled from 'styled-components';
 
-  class App extends React.Component {
-    get items() {
-      return Array.from(Array(10).keys());
-    }
+  const Container = styled.div`
+    width: 80%;
+    margin: 30px auto 0;
+  `;
 
-    render() {
-      return (
-        <ReactDemokit
-          className="p-3 app-container"
-          url="https://github.com/afeiship/react-progress">
-          <article className="message is-info">
-            <div className="message-header">Preview:</div>
-            <div className="message-body">
-              <h3 className="mb-3">
-                <center className="button is-primary">Progress bar</center>
-              </h3>
-              {this.items.map((item) => {
-                return (
-                  <ReactProgress
-                    className="mb-2"
-                    key={item}
-                    value={item * 10 + 10}
-                  />
-                );
-              })}
-            </div>
-          </article>
-        </ReactDemokit>
-      );
-    }
-  }
-
-  ReactDOM.render(<App />, document.getElementById('app'));
+  export default (props: any) => {
+    return (
+      <Container>
+        <ReactAntTextareaLines />
+      </Container>
+    );
+  };
 
   ```
 
-## documentation
-- https://afeiship.github.io/react-progress/
-
+## preview
+- https://afeiship.github.io/react-ant-textarea-lines/
 
 ## license
-Code released under [the MIT license](https://github.com/afeiship/react-progress/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/react-ant-textarea-lines/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/react-progress
-[version-url]: https://npmjs.org/package/@jswork/react-progress
+[version-image]: https://img.shields.io/npm/v/@jswork/react-ant-textarea-lines
+[version-url]: https://npmjs.org/package/@jswork/react-ant-textarea-lines
 
-[license-image]: https://img.shields.io/npm/l/@jswork/react-progress
-[license-url]: https://github.com/afeiship/react-progress/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/react-ant-textarea-lines
+[license-url]: https://github.com/afeiship/react-ant-textarea-lines/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-progress
-[size-url]: https://github.com/afeiship/react-progress/blob/master/dist/react-progress.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-ant-textarea-lines
+[size-url]: https://github.com/afeiship/react-ant-textarea-lines/blob/master/dist/react-ant-textarea-lines.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/react-progress
-[download-url]: https://www.npmjs.com/package/@jswork/react-progress
+[download-image]: https://img.shields.io/npm/dm/@jswork/react-ant-textarea-lines
+[download-url]: https://www.npmjs.com/package/@jswork/react-ant-textarea-lines

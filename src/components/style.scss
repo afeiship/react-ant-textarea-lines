@@ -1,12 +1,3 @@
-$react-progress-options: () !default;
-
-.react-progress {
-  height: 6px;
-  background: #ededed;
-  border: 1px solid #cfcfcf;
-  border-radius: 10px;
-  overflow: hidden;
-  &__body {
-    height: 100%;
-  }
+.react-ant-textarea-lines{
+  color: red;
 }
