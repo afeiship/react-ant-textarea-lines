@@ -14,29 +14,35 @@ npm install -S @jswork/react-ant-textarea-lines
 ## usage
 1. import css
   ```scss
-  @import "~@jswork/boilerplate-react-component/dist/style.css";
+  @import "~@jswork/react-ant-textarea-lines/dist/style.css";
 
   // or use sass
-  @import "~@jswork/boilerplate-react-component/dist/style.scss";
+  @import "~@jswork/react-ant-textarea-lines/dist/style.scss";
 
   // customize your styles:
-  $boilerplate-react-component-options: ()
+  $react-ant-textarea-lines-options: ()
   ```
 2. import js
   ```js
   import React from 'react';
-  import ReactAntTextareaLines from '@jswork/boilerplate-react-component';
+  import ReactAntTextareaLines from '@jswork/react-ant-textarea-lines';
   import styled from 'styled-components';
 
   const Container = styled.div`
     width: 80%;
     margin: 30px auto 0;
   `;
+  const value = ['https://www.baidu.com', 'https://ant.design/docs/react/introduce-cn'];
 
   export default (props: any) => {
     return (
       <Container>
-        <ReactAntTextareaLines />
+        <ReactAntTextareaLines
+          value={value}
+          onChange={(e) => {
+            console.log('ex:', e.target.value);
+          }}
+        />
       </Container>
     );
   };
