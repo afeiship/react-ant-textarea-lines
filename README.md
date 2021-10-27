@@ -46,7 +46,8 @@ npm install -S @jswork/react-ant-textarea-lines
         <ReactAntTextareaLines
           value={val}
           onChange={(e) => {
-            console.log('ex:', e.target.value);
+            setVal(e.target.value)
+            // console.log('ex:', e.target.value);
           }}
         />
 
