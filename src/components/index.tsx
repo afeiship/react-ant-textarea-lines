@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 import { Input } from 'antd';
 
 const CLASS_NAME = 'react-ant-textarea-lines';
+const isEqual = (v1, v2) => {
+  return v1.join() === v2.join();
+};
 
 interface EventTarget {
   target: {
     value: any;
-  }
+  };
 }
 
 export type ReactAntTextareaLinesProps = {
@@ -29,14 +32,13 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
   };
 
   state = {
-    value: this.props.value?.join('\n')
-  }
+    value: this.props.value
+  };
 
   shouldComponentUpdate(inProps) {
-    const { value } = inProps
-    const _value = value?.join('\n')
-    if (_value !== this.state.value) {
-      this.setState({ value: _value })
+    const { value } = inProps;
+    if (!isEqual(value, this.state.value)) {
+      this.setState({ value });
     }
     return true;
   }
@@ -44,20 +46,18 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
   handleChange = (inEvent) => {
     const { value } = inEvent.target;
     const { onChange } = this.props;
-    this.setState({ value }, () => {
-      onChange!({
-        target: {
-          value: value.trim().split('\n').filter(Boolean)
-        }
-      });
-    })
+    const _value = value.split('\n');
+    const target = { value: _value };
+    this.setState(target, () => {
+      onChange!({ target });
+    });
   };
 
   render() {
     const { value, onChange, ...props } = this.props;
     const _value = this.state.value;
     return (
-      <Input.TextArea autoSize value={_value} onChange={this.handleChange} {...props} />
+      <Input.TextArea autoSize value={_value!.join('\n')} onChange={this.handleChange} {...props} />
     );
   }
 }

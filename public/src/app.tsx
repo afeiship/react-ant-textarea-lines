@@ -20,7 +20,8 @@ export default (props: any) => {
       <ReactAntTextareaLines
         value={val}
         onChange={(e) => {
-          console.log('ex:', e.target.value);
+          setVal(e.target.value)
+          // console.log('ex:', e.target.value);
         }}
       />
 
