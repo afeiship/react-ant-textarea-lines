@@ -1,7 +1,7 @@
 {
   "name": "@jswork/react-ant-textarea-lines",
   "description": "Get lines with textarea for antd.",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,6 @@
   },
   "scripts": {
     "build": "tsup",
-    "postbuild": "postsass -s src/style.scss -d dist/style.css -c",
     "release": "release-it --ci --npm.skipChecks"
   },
   "devDependencies": {
