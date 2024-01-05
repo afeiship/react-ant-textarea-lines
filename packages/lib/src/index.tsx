@@ -28,11 +28,11 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
-    onChange: noop
+    onChange: noop,
   };
 
   state = {
-    value: this.props.value
+    value: this.props.value,
   };
 
   shouldComponentUpdate(inProps) {
