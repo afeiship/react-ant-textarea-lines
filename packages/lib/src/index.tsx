@@ -50,7 +50,7 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
     const _value = value.split('\n');
     const target = { value: _value };
     this.setState(target, () => {
-      onChange!({ target });
+      onChange?.({ target });
     });
   };
 
