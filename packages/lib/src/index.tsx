@@ -1,11 +1,10 @@
 import noop from '@jswork/noop';
 import React, { Component } from 'react';
 import { Input } from 'antd';
+import { TextAreaProps } from 'antd/es/input';
 
 const CLASS_NAME = 'react-ant-textarea-lines';
-const isEqual = (v1, v2) => {
-  return v1.join() === v2.join();
-};
+const isEqual = (v1: any[], v2: any[]) => v1.join() === v2.join();
 
 interface EventTarget {
   target: {
@@ -22,13 +21,14 @@ export type ReactAntTextareaLinesProps = {
    * The change handler.
    */
   onChange?: (event: EventTarget) => void;
-};
+} & TextAreaProps;
 
 export default class ReactAntTextareaLines extends Component<ReactAntTextareaLinesProps, any> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
     onChange: noop,
+    value: [],
   };
 
   state = {
@@ -37,7 +37,8 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
 
   shouldComponentUpdate(inProps) {
     const { value } = inProps;
-    if (!isEqual(value, this.state.value)) {
+    const stateValue = this.state.value;
+    if (stateValue && !isEqual(value, stateValue)) {
       this.setState({ value });
     }
     return true;
