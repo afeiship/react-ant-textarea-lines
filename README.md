@@ -43,14 +43,15 @@ npm install -S @jswork/react-ant-textarea-lines
           value={val}
           onChange={(e) => {
             setVal(e.target.value);
-            // console.log('ex:', e.target.value);
+            console.log('ex:', e.target.value);
           }}
         />
         <Button
           type="primary"
-          onClick={(e) => {
-            console.log('set value');
+          onClick={() => {
             setVal([
+              'https://www.baidu.com',
+              'https://www.google.com',
               'https://babeljs.io/repl',
               'https://ourcodeworld.com/articles/read/309/top-5-best-code-editor-plugins-written-in-javascript',
             ]);
