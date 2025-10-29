@@ -62,3 +62,7 @@ export default class ReactAntTextareaLines extends Component<ReactAntTextareaLin
     );
   }
 }
+
+export const ReactAntTextareaLinesFc = (props: ReactAntTextareaLinesProps) => {
+  return <ReactAntTextareaLines {...props} />;
+};
